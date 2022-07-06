@@ -1,10 +1,11 @@
 package lesson1;
 
 public class Cat implements Uchastnici {
-
+    private String race = "Cat";
     private String name;
     private int dis;
     private int height;
+    private boolean isOnDistance = true;
 
     public Cat(String name, int dis, int height) {
         this.name = name;
@@ -18,7 +19,7 @@ public class Cat implements Uchastnici {
         if (distance <= dis) {
             System.out.println("cat " + name + " ran " + distance + " m of distance");
         } else {
-            System.out.println("cat " + name + " can't run through " + distance + " m" );
+            isOnDistance = false;
         }
     }
 
@@ -27,7 +28,19 @@ public class Cat implements Uchastnici {
             if (H <= height) {
                 System.out.println("cat " + name + " jumped through " + H + " m");
             } else {
-                System.out.println("cat " + name + " can't jumped through " + H + " m" );
+                isOnDistance = false;
             }
         }
+
+    public boolean isOnDistance() {
+        return isOnDistance;
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

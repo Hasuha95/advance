@@ -1,9 +1,11 @@
 package lesson1;
 
 public class Human implements Uchastnici {
+    private String race = "Human";
     private String name;
     private int dis;
     private int height;
+    private boolean isOnDistance = true;
 
     public Human(String name, int dis, int height) {
         this.name = name;
@@ -15,7 +17,7 @@ public class Human implements Uchastnici {
         if (distance <= dis) {
             System.out.println("human " + name + " ran " + distance + " m of distance");
         } else {
-            System.out.println("human " + name + " can't run through " + distance + " m" );
+            isOnDistance = false;
         }
     }
 
@@ -23,8 +25,21 @@ public class Human implements Uchastnici {
         if (H <= height) {
             System.out.println("human " + name + " jumped through " + H + " m");
         } else {
-            System.out.println("human " + name + " can't jumped through " + H + " m" );
+            isOnDistance = false;
         }
+    }
+
+    public boolean isOnDistance() {
+        return isOnDistance;
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }
 

@@ -6,10 +6,10 @@ public class Main {
         Obstacles[] obstacles = {
             new Track(50),
             new Wall(1),
-            new Track(70),
-            new Wall(2),
             new Track(100),
-            new Wall(3)
+            new Wall(3),
+            new Track(200),
+            new Wall(5)
         };
 
         Uchastnici[] uchastnici = {
@@ -19,10 +19,15 @@ public class Main {
         };
 
 
-
+//        System.out.println(uchastnici[0].isOnDistance());
         for (Obstacles o: obstacles) {
             for (Uchastnici u: uchastnici) {
-                o.doIt(u);
+                if (u.isOnDistance() == true){
+                    o.doIt(u);
+                } else {
+                    System.out.println(u.getRace() +" " + u.getName() + " can't overcome this obstacles");
+                    break;
+                }
             }
         }
 

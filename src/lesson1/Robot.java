@@ -1,9 +1,11 @@
 package lesson1;
 
 public class Robot implements Uchastnici {
+    private String race = "Robot";
     private String model;
     private int dis;
     private int height;
+    private boolean isOnDistance = true;
 
     public Robot(String model, int dis, int height) {
         this.model = model;
@@ -16,7 +18,8 @@ public class Robot implements Uchastnici {
         if (distance <= dis) {
             System.out.println("robot " + model + " ran " + distance + " m of distance");
         } else {
-            System.out.println("robot " + model + " can't run through " + distance + " m" );
+//            System.out.println("robot " + model + " can't run through " + distance + " m" );
+            isOnDistance = false;
         }
     }
 
@@ -25,8 +28,21 @@ public class Robot implements Uchastnici {
         if (H <= height) {
             System.out.println("robot " + model + " jumped through " + H + " m");
         } else {
-            System.out.println("robot " + model + " can't jumped through " + H + " m" );
+            isOnDistance = false;
         }
+    }
+
+    public boolean isOnDistance() {
+        return isOnDistance;
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    @Override
+    public String getName() {
+        return getName();
     }
 
 }
