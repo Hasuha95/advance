@@ -15,16 +15,16 @@ public class Cat implements Uchastnici {
 
     @Override
     public void run(int distance) {
-        if (distance >= dis) {
-            System.out.println("cat " + name + " ran " + distance + " distance");
+        if (distance <= dis) {
+            System.out.println("cat " + name + " ran " + distance + " m of distance");
         } else {
-            System.out.println("cat " + name + " can't run through " + distance + " km" );
+            System.out.println("cat " + name + " can't run through " + distance + " m" );
         }
     }
 
     @Override
     public void jump(int H) {
-            if (H >= height) {
+            if (H <= height) {
                 System.out.println("cat " + name + " jumped through " + H + " m");
             } else {
                 System.out.println("cat " + name + " can't jumped through " + H + " m" );

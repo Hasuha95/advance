@@ -13,16 +13,16 @@ public class Robot implements Uchastnici {
 
 
     public void run(int distance) {
-        if (distance >= dis) {
-            System.out.println("robot " + model + " ran " + distance + " distance");
+        if (distance <= dis) {
+            System.out.println("robot " + model + " ran " + distance + " m of distance");
         } else {
-            System.out.println("robot " + model + " can't run through " + distance + " km" );
+            System.out.println("robot " + model + " can't run through " + distance + " m" );
         }
     }
 
     @Override
     public void jump(int H) {
-        if (H >= height) {
+        if (H <= height) {
             System.out.println("robot " + model + " jumped through " + H + " m");
         } else {
             System.out.println("robot " + model + " can't jumped through " + H + " m" );
