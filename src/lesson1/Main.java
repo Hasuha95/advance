@@ -12,7 +12,7 @@ public class Main {
             new Wall(3)
         };
 
-        Uchastnici[] actions = {
+        Uchastnici[] uchastnici = {
                 new Robot("2201", 1000, 5),
                 new Cat("barsik", 70, 3),
                 new Human("Masturbek", 500, 1)
@@ -20,15 +20,14 @@ public class Main {
 
 
 
-//        for (Obstacles o: obstacles) {
-//            for (Action a: actions) {
-//                a.jump(o);
-//                a.run(o);
-//            }
-//        }
+        for (Obstacles o: obstacles) {
+            for (Uchastnici u: uchastnici) {
+                o.doIt(u);
+            }
+        }
 
-        Robot robot1 = new Robot("2201", 123, 12);
-        Track track1 = new Track(123);
+//        Robot robot1 = new Robot("2201", 123, 12);
+//        Track track1 = new Track(123);
 
     }
 }
